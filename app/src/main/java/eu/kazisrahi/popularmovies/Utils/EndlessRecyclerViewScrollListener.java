@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.Utils;
+package eu.kazisrahi.popularmovies.Utils;
 
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;

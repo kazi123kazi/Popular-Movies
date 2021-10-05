@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.DataModels;
+package eu.kazisrahi.popularmovies.DataModels;
 
 import android.os.Parcel;
 import android.os.Parcelable;

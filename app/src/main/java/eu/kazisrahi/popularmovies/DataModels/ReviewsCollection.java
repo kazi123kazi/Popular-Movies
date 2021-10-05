@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.DataModels;
+package eu.kazisrahi.popularmovies.DataModels;
 
 import java.util.ArrayList;
 import java.util.List;

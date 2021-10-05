@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies;
+package eu.kazisrahi.popularmovies;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

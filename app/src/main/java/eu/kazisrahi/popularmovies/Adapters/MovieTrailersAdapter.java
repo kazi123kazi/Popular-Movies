@@ -1,19 +1,18 @@
-package eu.anifantakis.popularmovies.Adapters;
+package eu.kazisrahi.popularmovies.Adapters;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.squareup.picasso.Picasso;
 
-import eu.anifantakis.popularmovies.R;
-import eu.anifantakis.popularmovies.DataModels.TrailersCollection;
-import eu.anifantakis.popularmovies.databinding.TrailerRowBinding;
+import eu.kazisrahi.popularmovies.R;
+import eu.kazisrahi.popularmovies.DataModels.TrailersCollection;
+import eu.kazisrahi.popularmovies.databinding.TrailerRowBinding;
 
 public class MovieTrailersAdapter extends RecyclerView.Adapter<MovieTrailersAdapter.MovieTrailersHolder> {
     final private TrailerItemClickListener mOnClickListener;

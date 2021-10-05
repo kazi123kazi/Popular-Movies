@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies;
+package eu.kazisrahi.popularmovies;
 
 import android.annotation.SuppressLint;
 import android.app.LoaderManager;
@@ -28,13 +28,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 
-import eu.anifantakis.popularmovies.Adapters.MoviesAdapter;
-import eu.anifantakis.popularmovies.DataModels.MoviesCollection;
-import eu.anifantakis.popularmovies.DataModels.MoviesDBContract;
-import eu.anifantakis.popularmovies.Utils.EndlessRecyclerViewScrollListener;
-import eu.anifantakis.popularmovies.Utils.NetworkUtils;
-import eu.anifantakis.popularmovies.Utils.PopularMoviesJSonUtils;
-import eu.anifantakis.popularmovies.databinding.ActivityMainBinding;
+import eu.kazisrahi.popularmovies.Adapters.MoviesAdapter;
+import eu.kazisrahi.popularmovies.DataModels.MoviesCollection;
+import eu.kazisrahi.popularmovies.DataModels.MoviesDBContract;
+import eu.kazisrahi.popularmovies.Utils.EndlessRecyclerViewScrollListener;
+import eu.kazisrahi.popularmovies.Utils.NetworkUtils;
+import eu.kazisrahi.popularmovies.Utils.PopularMoviesJSonUtils;
+import eu.kazisrahi.popularmovies.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity implements
         MoviesAdapter.MovieItemClickListener,

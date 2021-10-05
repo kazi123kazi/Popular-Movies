@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies;
+package eu.kazisrahi.popularmovies;
 
 import org.junit.Test;
 

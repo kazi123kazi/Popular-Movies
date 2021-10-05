@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.Utils;
+package eu.kazisrahi.popularmovies.Utils;
 
 // Source: https://danielkvist.net/code/animated-tabhost-with-slide-gesture-in-android
 

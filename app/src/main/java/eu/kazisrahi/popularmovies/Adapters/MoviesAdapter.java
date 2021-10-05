@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.Adapters;
+package eu.kazisrahi.popularmovies.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,9 +20,9 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import eu.anifantakis.popularmovies.DataModels.MoviesCollection;
-import eu.anifantakis.popularmovies.R;
-import eu.anifantakis.popularmovies.databinding.MovieRowBinding;
+import eu.kazisrahi.popularmovies.DataModels.MoviesCollection;
+import eu.kazisrahi.popularmovies.R;
+import eu.kazisrahi.popularmovies.databinding.MovieRowBinding;
 import okhttp3.Cache;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;

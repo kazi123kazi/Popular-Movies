@@ -1,9 +1,9 @@
-package eu.anifantakis.popularmovies.DataModels;
+package eu.kazisrahi.popularmovies.DataModels;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import eu.anifantakis.popularmovies.DataModels.MoviesDBContract.MovieEntry;
+import eu.kazisrahi.popularmovies.DataModels.MoviesDBContract.MovieEntry;
 
 public class MoviesDBHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "movies.db";

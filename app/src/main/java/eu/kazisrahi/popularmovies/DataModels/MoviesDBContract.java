@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.DataModels;
+package eu.kazisrahi.popularmovies.DataModels;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

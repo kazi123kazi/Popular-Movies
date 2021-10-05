@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.Adapters;
+package eu.kazisrahi.popularmovies.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import eu.anifantakis.popularmovies.DataModels.ReviewsCollection;
-import eu.anifantakis.popularmovies.R;
-import eu.anifantakis.popularmovies.databinding.ReviewRowBinding;
+import eu.kazisrahi.popularmovies.DataModels.ReviewsCollection;
+import eu.kazisrahi.popularmovies.R;
+import eu.kazisrahi.popularmovies.databinding.ReviewRowBinding;
 
 public class MovieReviewsAdapter extends RecyclerView.Adapter<MovieReviewsAdapter.MovieReviewsHolder> {
     private ReviewRowBinding binding;

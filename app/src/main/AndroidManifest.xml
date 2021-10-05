@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="eu.anifantakis.popularmovies">
+    package="eu.kazisrahi.popularmovies">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="eu.anifantakis.popularmovies.MainActivity"
+        <activity android:name="eu.kazisrahi.popularmovies.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,17 +21,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="eu.anifantakis.popularmovies.DetailActivity"
+        <activity android:name="eu.kazisrahi.popularmovies.DetailActivity"
             android:theme="@style/AppTheme.Detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="eu.anifantakis.popularmovies.MainActivity" />
+                android:value="eu.kazisrahi.popularmovies.MainActivity" />
         </activity>
 
 
         <provider
-            android:name="eu.anifantakis.popularmovies.DataModels.MoviesContentProvider"
-            android:authorities="eu.anifantakis.popularmovies"
+            android:name="eu.kazisrahi.popularmovies.DataModels.MoviesContentProvider"
+            android:authorities="eu.kazisrahi.popularmovies"
             android:exported="false"/>
 
 

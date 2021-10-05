@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies;
+package eu.kazisrahi.popularmovies;
 
 import android.annotation.SuppressLint;
 import android.app.LoaderManager;
@@ -24,7 +24,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TabHost;
-import android.widget.Toast;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
@@ -35,16 +34,16 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import eu.anifantakis.popularmovies.Adapters.MovieReviewsAdapter;
-import eu.anifantakis.popularmovies.Adapters.MovieTrailersAdapter;
-import eu.anifantakis.popularmovies.DataModels.MoviesCollection;
-import eu.anifantakis.popularmovies.DataModels.MoviesDBContract;
-import eu.anifantakis.popularmovies.DataModels.ReviewsCollection;
-import eu.anifantakis.popularmovies.DataModels.TrailersCollection;
-import eu.anifantakis.popularmovies.Utils.AnimatedTabHostListener;
-import eu.anifantakis.popularmovies.Utils.NetworkUtils;
-import eu.anifantakis.popularmovies.Utils.PopularMoviesJSonUtils;
-import eu.anifantakis.popularmovies.databinding.ActivityDetailBinding;
+import eu.kazisrahi.popularmovies.Adapters.MovieReviewsAdapter;
+import eu.kazisrahi.popularmovies.Adapters.MovieTrailersAdapter;
+import eu.kazisrahi.popularmovies.DataModels.MoviesCollection;
+import eu.kazisrahi.popularmovies.DataModels.MoviesDBContract;
+import eu.kazisrahi.popularmovies.DataModels.ReviewsCollection;
+import eu.kazisrahi.popularmovies.DataModels.TrailersCollection;
+import eu.kazisrahi.popularmovies.Utils.AnimatedTabHostListener;
+import eu.kazisrahi.popularmovies.Utils.NetworkUtils;
+import eu.kazisrahi.popularmovies.Utils.PopularMoviesJSonUtils;
+import eu.kazisrahi.popularmovies.databinding.ActivityDetailBinding;
 
 public class DetailActivity extends AppCompatActivity implements
         MovieTrailersAdapter.TrailerItemClickListener {
@@ -281,7 +280,7 @@ public class DetailActivity extends AppCompatActivity implements
         );
 
 
-        return (cursor.getCount()>0);
+        return ((cursor != null ? cursor.getCount() : 0) >0);
     }
 
     @Override

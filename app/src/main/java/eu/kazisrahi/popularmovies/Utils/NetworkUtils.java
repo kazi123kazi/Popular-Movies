@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package eu.anifantakis.popularmovies.Utils;
+package eu.kazisrahi.popularmovies.Utils;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

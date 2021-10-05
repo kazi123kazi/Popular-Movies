@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.Utils;
+package eu.kazisrahi.popularmovies.Utils;
 
 import android.annotation.SuppressLint;
 
@@ -10,9 +10,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import eu.anifantakis.popularmovies.DataModels.MoviesCollection;
-import eu.anifantakis.popularmovies.DataModels.ReviewsCollection;
-import eu.anifantakis.popularmovies.DataModels.TrailersCollection;
+import eu.kazisrahi.popularmovies.DataModels.MoviesCollection;
+import eu.kazisrahi.popularmovies.DataModels.ReviewsCollection;
+import eu.kazisrahi.popularmovies.DataModels.TrailersCollection;
 
 
 /**

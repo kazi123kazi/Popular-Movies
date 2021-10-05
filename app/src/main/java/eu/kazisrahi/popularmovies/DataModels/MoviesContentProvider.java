@@ -1,4 +1,4 @@
-package eu.anifantakis.popularmovies.DataModels;
+package eu.kazisrahi.popularmovies.DataModels;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;
@@ -11,7 +11,7 @@ import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import static eu.anifantakis.popularmovies.DataModels.MoviesDBContract.MovieEntry.TABLE_NAME;
+import static eu.kazisrahi.popularmovies.DataModels.MoviesDBContract.MovieEntry.TABLE_NAME;
 
 public class MoviesContentProvider extends ContentProvider {
 
