@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Popular Movies</string>
+    <string name="app_name">Movies Bytes</string>
 
     <string name="network.api_key" translatable="false">
         <!-- ======================= [PUT YOUR API KEY ANYWHERE UNDER THIS LINE ] ======================== -->

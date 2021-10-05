@@ -1,0 +1,786 @@
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    package=\"eu.kazisrahi.popularmovies\">\r\n\r\n    <uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />\r\n    <uses-permission android:name=\"android.permission.INTERNET\" />\r\n\r\n    <application\r\n        android:allowBackup=\"true\"\r\n        android:icon=\"@mipmap/ic_launcher\"\r\n        android:label=\"@string/app_name\"\r\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\r\n        android:supportsRtl=\"true\"\r\n        android:theme=\"@style/AppTheme\">\r\n\r\n        <activity android:name=\"eu.kazisrahi.popularmovies.MainActivity\"\r\n            android:launchMode=\"singleTop\">\r\n            <intent-filter>\r\n                <action android:name=\"android.intent.action.MAIN\" />\r\n                <category android:name=\"android.intent.category.LAUNCHER\" />\r\n            </intent-filter>\r\n        </activity>\r\n\r\n        <activity android:name=\"eu.kazisrahi.popularmovies.DetailActivity\"\r\n            android:theme=\"@style/AppTheme.Detail\">\r\n            <meta-data\r\n                android:name=\"android.support.PARENT_ACTIVITY\"\r\n                android:value=\"eu.kazisrahi.popularmovies.MainActivity\" />\r\n        </activity>\r\n\r\n\r\n        <provider\r\n            android:name=\"eu.kazisrahi.popularmovies.DataModels.MoviesContentProvider\"\r\n            android:authorities=\"eu.kazisrahi.popularmovies\"\r\n            android:exported=\"false\"/>\r\n\r\n\r\n    </application>\r\n\r\n</manifest>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/app/src/main/AndroidManifest.xml	(date 1633440226101)
+@@ -9,32 +9,33 @@
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+         android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
+         android:supportsRtl="true"
+         android:theme="@style/AppTheme">
++        <meta-data
++            android:name="com.google.android.actions"
++            android:resource="@xml/actions" />
+ 
+-        <activity android:name="eu.kazisrahi.popularmovies.MainActivity"
++        <activity
++            android:name=".MainActivity"
+             android:launchMode="singleTop">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
++
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+-
+-        <activity android:name="eu.kazisrahi.popularmovies.DetailActivity"
++        <activity
++            android:name=".DetailActivity"
+             android:theme="@style/AppTheme.Detail">
+             <meta-data
+                 android:name="android.support.PARENT_ACTIVITY"
+                 android:value="eu.kazisrahi.popularmovies.MainActivity" />
+         </activity>
+ 
+-
+         <provider
+-            android:name="eu.kazisrahi.popularmovies.DataModels.MoviesContentProvider"
++            android:name=".DataModels.MoviesContentProvider"
+             android:authorities="eu.kazisrahi.popularmovies"
+-            android:exported="false"/>
+-
+-
++            android:exported="false" />
+     </application>
+ 
+ </manifest>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\r\n    <background android:drawable=\"@drawable/ic_launcher_background\" />\r\n    <foreground android:drawable=\"@drawable/ic_launcher_foreground\" />\r\n</adaptive-icon>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+--- a/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml	(date 1633440907924)
+@@ -1,5 +1,4 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++   
+ </adaptive-icon>
+\ No newline at end of file
+Index: .idea/assetWizardSettings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/assetWizardSettings.xml b/.idea/assetWizardSettings.xml
+new file mode 100644
+--- /dev/null	(date 1633441132505)
++++ b/.idea/assetWizardSettings.xml	(date 1633441132505)
+@@ -0,0 +1,330 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="WizardSettings">
++    <option name="children">
++      <map>
++        <entry key="imageWizard">
++          <value>
++            <PersistentState>
++              <option name="children">
++                <map>
++                  <entry key="imageAssetPanel">
++                    <value>
++                      <PersistentState>
++                        <option name="children">
++                          <map>
++                            <entry key="actionbar">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="clipArt">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                                <entry key="imagePath" value="C:\Users\KAZIS\AppData\Local\Temp\ic_android_black_24dp.xml" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="text">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="textAsset">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                            <entry key="launcher">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="backgroundImage">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="scalingPercent" value="78" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundClipArt">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="imagePath" value="C:\Users\KAZIS\AppData\Local\Temp\ic_android_black_24dp.xml" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundImage">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                                <entry key="imagePath" value="F:\Projects Android\ic_launcher\play_store_512.png" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundText">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundTextAsset">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                  <option name="values">
++                                    <map>
++                                      <entry key="outputName" value="logo" />
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                            <entry key="launcherLegacy">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="clipArt">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                                <entry key="imagePath" value="C:\Users\KAZIS\AppData\Local\Temp\ic_android_black_24dp.xml" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="image">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                                <entry key="imagePath" value="F:\Projects Android\ic_launcher\play_store_512.png" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="text">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="textAsset">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                  <option name="values">
++                                    <map>
++                                      <entry key="assetType" value="IMAGE" />
++                                      <entry key="imageAsset" value="F:\Projects Android\ic_launcher\play_store_512.png" />
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                            <entry key="notification">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="clipArt">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                                <entry key="imagePath" value="C:\Users\KAZIS\AppData\Local\Temp\ic_android_black_24dp.xml" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="text">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="textAsset">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                            <entry key="tvBanner">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="foregroundText">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                            <entry key="tvChannel">
++                              <value>
++                                <PersistentState>
++                                  <option name="children">
++                                    <map>
++                                      <entry key="foregroundClipArt">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="imagePath" value="C:\Users\KAZIS\AppData\Local\Temp\ic_android_black_24dp.xml" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundImage">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundText">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                      <entry key="foregroundTextAsset">
++                                        <value>
++                                          <PersistentState>
++                                            <option name="values">
++                                              <map>
++                                                <entry key="color" value="000000" />
++                                              </map>
++                                            </option>
++                                          </PersistentState>
++                                        </value>
++                                      </entry>
++                                    </map>
++                                  </option>
++                                </PersistentState>
++                              </value>
++                            </entry>
++                          </map>
++                        </option>
++                        <option name="values">
++                          <map>
++                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
++                          </map>
++                        </option>
++                      </PersistentState>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </PersistentState>
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++</project>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Popular Movies</string>\r\n\r\n    <string name=\"network.api_key\" translatable=\"false\">\r\n        <!-- ======================= [PUT YOUR API KEY ANYWHERE UNDER THIS LINE ] ======================== -->\r\n\r\n        4fd990dabe61cecb39a6f7ff8e805daa\r\n\r\n        <!-- ======================= [PUT YOUR API KEY ANYWHERE ABOVE THIS LINE ] ======================== -->\r\n    </string>\r\n\r\n    <!-- No Network Alert Dialog -->\r\n    <string name=\"main.no_network\">No network detected!\\nThis application requires network connection</string>\r\n    <string name=\"main.no_network_try_again\">Try Again</string>\r\n    <string name=\"main.no_network_close\">Close App</string>\r\n\r\n    <!-- No API KEY Alert Dialog -->\r\n    <string name=\"main.no_api_key\">No API KEY Found!\\n\\nThere is a predefined location for your API KEY in the strings.xml\\n\\nGo to the strings.xml and fill it up</string>\r\n    <string name=\"main.bad_api_key\">Bad API KEY!\\n\\nYour defined API KEY is wrong!\\n\\nThere is a predefined location for your API KEY in the strings.xml\\n\\nGo to the strings.xml and fill it up</string>\r\n    <string name=\"main.no_api_key_close\">Close App</string>\r\n\r\n    <!-- Menu Item strings -->\r\n    <string name=\"menu.mi_sort_popular\">Most Popular</string>\r\n    <string name=\"menu.mi_sort_most_voted\">Most Voted</string>\r\n    <string name=\"menu.mi_favourites\">Favourites</string>\r\n\r\n    <!-- Snackbar -->\r\n    <string name=\"favourites_add\">Movie Added on Favorites</string>\r\n    <string name=\"favourites_removed\">Movie Removed from Favorites</string>\r\n\r\n    <!-- Main Activity Action Bar Strings -->\r\n    <string name=\"main.actionbar_most_popular\"> Movies: Most Popular</string>\r\n    <string name=\"main.actionbar_most_voted\"> Movies: Most Voted</string>\r\n    <string name=\"main.actionbar_favourites\"> Movies: Favourites</string>\r\n\r\n    <!-- Detail Activity release date, synopsis text, and rating Strings, etc -->\r\n    <string name=\"detail.released_title\">Release Date</string>\r\n    <string name=\"detail.rating_title\">Rating</string>\r\n    <string name=\"detail.released\" translatable=\"false\">%1$s</string>\r\n    <string name=\"detail.release_unavailable\">Unavailable</string>\r\n    <string name=\"detail.synopsis\">Synopsis</string>\r\n    <string name=\"detail.by_author\">By:</string>\r\n    <string name=\"detail.no_trailer\">NO TRAILER FOUND</string>\r\n    <string name=\"detail.no_review\">NO REVIEW FOUND</string>\r\n    <string name=\"detail.rating_text\" translatable=\"false\">(%1$.1f / 10.0)</string>\r\n\r\n    <!-- Image Descriptions -->\r\n    <string name=\"row.thumb_description\">Movie Thumbnail</string>\r\n    <string name=\"detail.img_description\">Movie Image</string>\r\n\r\n\r\n    <!-- ======================= SERVED AS CONSTANTS OR DUMMY DATA - NON TRANSLATABLE ====================== -->\r\n    <!-- NETWORK -->\r\n    <string name=\"network.api_param\">api_key</string>\r\n\r\n    <string name=\"network.base_url\" translatable=\"false\">https://api.themoviedb.org/3/movie</string>\r\n    <string name=\"network.folder_videos\" translatable=\"false\">/videos</string>\r\n    <string name=\"network.folder_reviews\" translatable=\"false\">/reviews</string>\r\n    <string name=\"network.folder_popular\" translatable=\"false\">/popular</string>\r\n    <string name=\"network.folder_top_rated\" translatable=\"false\">/top_rated</string>\r\n    <string name=\"network.url_images\" translatable=\"false\">https://image.tmdb.org/t/p/</string>\r\n\r\n    <!-- api image widths -->\r\n    <string name=\"network.width.92\" translatable=\"false\">w92</string>\r\n    <string name=\"network.width.154\" translatable=\"false\">w154</string>\r\n    <string name=\"network.width.185\" translatable=\"false\">w185</string>\r\n    <string name=\"network.width.342\" translatable=\"false\">w342</string>\r\n    <string name=\"network.width.500\" translatable=\"false\">w500</string>\r\n    <string name=\"network.width.780\" translatable=\"false\">w780</string>\r\n    <string name=\"network.width.original\" translatable=\"false\">original</string>\r\n\r\n    <!-- Dummy descriptions == tools:text on xml files -->\r\n    <string name=\"dummy_synopsis\" translatable=\"false\">Foo bla bla\\nblabla\\nmore blabla</string>\r\n    <string name=\"dummy_movie_name\" translatable=\"false\">MOVIE NAME</string>\r\n    <string name=\"dummy_release_date\" translatable=\"false\">01/01/2018</string>\r\n    <string name=\"dummy_rating\" translatable=\"false\">3.5</string>\r\n\r\n    <!-- YouTube Videos -->\r\n    <string name=\"youtube_video_url\" translatable=\"false\">https://www.youtube.com/watch?v=</string>\r\n    <string name=\"youtube_img_url\" translatable=\"false\">http://img.youtube.com/vi/</string>\r\n\r\n    <string name=\"transition_photo\" translatable=\"false\">transition_photo</string>\r\n\r\n\r\n\r\n</resources>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/app/src/main/res/values/strings.xml	(date 1633430976336)
+@@ -1,5 +1,5 @@
+ <resources>
+-    <string name="app_name">Popular Movies</string>
++    <string name="app_name">Movies Bytes</string>
+ 
+     <string name="network.api_key" translatable="false">
+         <!-- ======================= [PUT YOUR API KEY ANYWHERE UNDER THIS LINE ] ======================== -->
+Index: app/src/main/res/mipmap-anydpi-v26/mipmap-anydpi-v26/ic_launcher.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/mipmap-anydpi-v26/ic_launcher.xml b/app/src/main/res/mipmap-anydpi-v26/mipmap-anydpi-v26/ic_launcher.xml
+new file mode 100644
+--- /dev/null	(date 1633414720624)
++++ b/app/src/main/res/mipmap-anydpi-v26/mipmap-anydpi-v26/ic_launcher.xml	(date 1633414720624)
+@@ -0,0 +1,5 @@
++<?xml version="1.0" encoding="utf-8"?>
++<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
++  <background android:drawable="@mipmap/ic_launcher_adaptive_back"/>
++  <foreground android:drawable="@mipmap/ic_launcher_adaptive_fore"/>
++</adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<adaptive-icon xmlns:android=\"http://schemas.android.com/apk/res/android\">\r\n    <background android:drawable=\"@drawable/ic_launcher_background\" />\r\n    <foreground android:drawable=\"@drawable/ic_launcher_foreground\" />\r\n</adaptive-icon>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+--- a/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml	(date 1633440913646)
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+-    <background android:drawable="@drawable/ic_launcher_background" />
+-    <foreground android:drawable="@drawable/ic_launcher_foreground" />
++    <background android:drawable="@drawable/ic_launcher_background"/>
++    <foreground android:drawable="@mipmap/ic_launcher_foreground"/>
+ </adaptive-icon>
+\ No newline at end of file
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<vector xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:width=\"108dp\"\r\n    android:height=\"108dp\"\r\n    android:viewportHeight=\"108\"\r\n    android:viewportWidth=\"108\">\r\n    <path\r\n        android:fillColor=\"#26A69A\"\r\n        android:pathData=\"M0,0h108v108h-108z\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M9,0L9,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,0L19,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M29,0L29,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M39,0L39,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M49,0L49,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M59,0L59,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M69,0L69,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M79,0L79,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M89,0L89,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M99,0L99,108\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,9L108,9\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,19L108,19\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,29L108,29\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,39L108,39\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,49L108,49\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,59L108,59\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,69L108,69\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,79L108,79\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,89L108,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M0,99L108,99\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,29L89,29\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,39L89,39\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,49L89,49\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,59L89,59\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,69L89,69\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M19,79L89,79\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M29,19L29,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M39,19L39,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M49,19L49,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M59,19L59,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M69,19L69,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n    <path\r\n        android:fillColor=\"#00000000\"\r\n        android:pathData=\"M79,19L79,89\"\r\n        android:strokeColor=\"#33FFFFFF\"\r\n        android:strokeWidth=\"0.8\" />\r\n</vector>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/ic_launcher_background.xml
+--- a/app/src/main/res/drawable/ic_launcher_background.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/app/src/main/res/drawable/ic_launcher_background.xml	(date 1633439360471)
+@@ -1,170 +1,74 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="108dp"
++<vector
+     android:height="108dp"
++    android:width="108dp"
+     android:viewportHeight="108"
+-    android:viewportWidth="108">
+-    <path
+-        android:fillColor="#26A69A"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeColor="#33FFFFFF"
+-        android:strokeWidth="0.8" />
++    android:viewportWidth="108"
++    xmlns:android="http://schemas.android.com/apk/res/android">
++    <path android:fillColor="#3DDC84"
++          android:pathData="M0,0h108v108h-108z"/>
++    <path android:fillColor="#00000000" android:pathData="M9,0L9,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,0L19,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M29,0L29,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M39,0L39,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M49,0L49,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M59,0L59,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M69,0L69,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M79,0L79,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M89,0L89,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M99,0L99,108"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,9L108,9"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,19L108,19"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,29L108,29"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,39L108,39"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,49L108,49"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,59L108,59"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,69L108,69"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,79L108,79"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,89L108,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M0,99L108,99"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,29L89,29"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,39L89,39"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,49L89,49"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,59L89,59"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,69L89,69"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M19,79L89,79"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M29,19L29,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M39,19L39,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M49,19L49,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M59,19L59,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M69,19L69,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++    <path android:fillColor="#00000000" android:pathData="M79,19L79,89"
++          android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
+ </vector>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"NullableNotNullManager\">\r\n    <option name=\"myDefaultNullable\" value=\"android.support.annotation.Nullable\" />\r\n    <option name=\"myDefaultNotNull\" value=\"android.support.annotation.NonNull\" />\r\n    <option name=\"myNullables\">\r\n      <value>\r\n        <list size=\"5\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.Nullable\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nullable\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"javax.annotation.CheckForNull\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.Nullable\" />\r\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.Nullable\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n    <option name=\"myNotNulls\">\r\n      <value>\r\n        <list size=\"4\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.NotNull\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nonnull\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.NonNull\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.NonNull\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_11\" default=\"true\" project-jdk-name=\"11\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 2cc7ab741dffceb20bc73bbffcabdbcbcf18274a)
++++ b/.idea/misc.xml	(date 1633440691503)
+@@ -1,26 +1,57 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="DesignSurface">
++    <option name="filePathToZoomLevelMap">
++      <map>
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1125" />
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/layout/layout.xml" value="0.1" />
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/menu/main_menu.xml" value="0.1" />
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1125" />
++        <entry key="..\:/Projects Android/Popular Movies/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2203125" />
++      </map>
++    </option>
++  </component>
+   <component name="NullableNotNullManager">
+     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+     <option name="myNullables">
+       <value>
+-        <list size="5">
++        <list size="14">
+           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+           <item index="2" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+           <item index="3" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+           <item index="4" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
++          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
++          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
++          <item index="7" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
++          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
++          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
++          <item index="10" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
++          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
++          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
++          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+         </list>
+       </value>
+     </option>
+     <option name="myNotNulls">
+       <value>
+-        <list size="4">
++        <list size="14">
+           <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+           <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+           <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+           <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
++          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
++          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
++          <item index="6" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
++          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
++          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
++          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
++          <item index="10" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
++          <item index="11" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
++          <item index="12" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
++          <item index="13" class="java.lang.String" itemvalue="lombok.NonNull" />
+         </list>
+       </value>
+     </option>

@@ -7,34 +7,33 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="eu.kazisrahi.popularmovies.MainActivity"
+
+        <activity
+            android:name=".MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="eu.kazisrahi.popularmovies.DetailActivity"
+        <activity
+            android:name=".DetailActivity"
             android:theme="@style/AppTheme.Detail">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="eu.kazisrahi.popularmovies.MainActivity" />
         </activity>
 
-
         <provider
-            android:name="eu.kazisrahi.popularmovies.DataModels.MoviesContentProvider"
+            android:name=".DataModels.MoviesContentProvider"
             android:authorities="eu.kazisrahi.popularmovies"
-            android:exported="false"/>
-
-
+            android:exported="false" />
     </application>
 
 </manifest>
