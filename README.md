@@ -9,3 +9,6 @@ Go to the `strings.xml` file and find the line
 There you should replace this line with your actual **API KEY** and the application will be functional.
 
 The API Key can be generated from the TMDB Website.
+
+# Download the Application from Playstore
+[Link](https://play.google.com/store/apps/details?id=eu.anifantakis.popularmovies)
