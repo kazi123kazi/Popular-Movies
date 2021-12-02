@@ -1,10 +1,11 @@
 # Popular Movies Android App
 
 It is an android based application that displays information from TheMovieDB.org on  Most Popular or Top Rated movies (according to the criteria selected by the user). It also contains a section to display the user's "Favorite" movies.<br>
+## Download the Application from [Playstore](https://play.google.com/store/apps/details?id=eu.anifantakis.popularmovies)    <img src="https://github.com/kazi123kazi/Popular-Movies/blob/master/play_store_512.png" alt="logo" width="25" height="25" style="margin:5px">
 
-Images section
+![Master Activity](https://raw.githubusercontent.com/test2209/assets-udacity-and/master/project-2-popular-movies-2/screenshot-1.gif)   ![Detail Activity](https://raw.githubusercontent.com/test2209/assets-udacity-and/master/project-2-popular-movies-2/screenshot-2.gif)
 
-## Download the Application from [Playstore](https://play.google.com/store/apps/details?id=eu.anifantakis.popularmovies)
+![Detail Activity](https://raw.githubusercontent.com/test2209/assets-udacity-and/master/project-2-popular-movies-2/screenshot-3.gif)   ![Detail Activity](https://raw.githubusercontent.com/test2209/assets-udacity-and/master/project-2-popular-movies-2/screenshot-4.gif)
 
 ### These are the different features you will find on this app:
 
